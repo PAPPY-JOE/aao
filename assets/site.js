@@ -25,7 +25,10 @@ const isPreview = new URLSearchParams(location.search).has('preview');
 if (themeButton) {
   const setTheme = light => {
     document.body.classList.toggle('light-mode', light);
-    themeButton.textContent = light ? 'Dark mode' : 'Light mode';
+    themeButton.querySelector('[data-theme-label]').textContent = light ? 'Dark mode' : 'Light mode';
+    themeButton.querySelector('[data-icon-sun]').hidden = light;
+    themeButton.querySelector('[data-icon-moon]').hidden = !light;
+    themeButton.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
     themeButton.setAttribute('aria-pressed', String(light));
   };
   let saved = null;
