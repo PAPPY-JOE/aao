@@ -6,9 +6,8 @@
 
 .cinematic.light-mode .stage h1 em{color:#66645d}
 
-/* Keep the original hero image geometry and caption composition. */
+/* Theme controls retain their inline sun/moon icons. */
 .theme-switch{display:inline-flex;align-items:center;justify-content:center;gap:8px}.theme-switch svg{flex:none}.theme-switch svg[hidden]{display:none}
-.stage-caption{position:relative;z-index:1;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.95)}
-.stage-caption span{position:relative;isolation:isolate}
-.stage-caption span::before{content:'';position:absolute;z-index:-1;inset:-10px -14px;pointer-events:none;background:radial-gradient(ellipse at center,rgba(0,0,0,.9) 30%,rgba(0,0,0,.65) 58%,transparent 75%)}
-.cinematic.light-mode .stage-caption{color:#fff}
+
+
+
