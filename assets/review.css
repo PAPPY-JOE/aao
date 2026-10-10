@@ -6,9 +6,9 @@
 
 .cinematic.light-mode .stage h1 em{color:#66645d}
 
-/* Hero captions retain independent contrast in either page theme. */
+/* Keep the original hero image geometry and caption composition. */
 .theme-switch{display:inline-flex;align-items:center;justify-content:center;gap:8px}.theme-switch svg{flex:none}.theme-switch svg[hidden]{display:none}
-.stage-image{margin:0;position:relative;overflow:hidden;min-width:0;height:100%;background:#262626;text-align:left}.stage-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 24%;transition:transform .6s ease}.stage-image:last-child img{object-position:50% 32%}.stage-image::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,transparent 55%,rgba(0,0,0,.45) 75%,rgba(0,0,0,.88) 100%)}.stage-image figcaption,.cinematic.light-mode .stage-image figcaption{position:absolute;z-index:1;left:20px;right:20px;bottom:20px;padding:9px 12px;background:rgba(0,0,0,.65);color:#fff;font-size:13px;letter-spacing:.035em;line-height:1.5;width:fit-content;max-width:calc(100% - 40px)}
-@media(hover:hover){.stage-image:hover img{transform:scale(1.02)}}
-@media(max-width:700px){.stage-image figcaption,.cinematic.light-mode .stage-image figcaption{left:10px;right:10px;bottom:12px;padding:7px 9px;font-size:11px;max-width:calc(100% - 20px)}}
-@media(prefers-reduced-motion:reduce){.stage-image img{transition:none}.stage-image:hover img{transform:none}}
+.stage-caption{position:relative;z-index:1;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.95)}
+.stage-caption span{position:relative;isolation:isolate}
+.stage-caption span::before{content:'';position:absolute;z-index:-1;inset:-10px -14px;pointer-events:none;background:radial-gradient(ellipse at center,rgba(0,0,0,.9) 30%,rgba(0,0,0,.65) 58%,transparent 75%)}
+.cinematic.light-mode .stage-caption{color:#fff}
